@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<body>
+<table border="1" width="100%">
+  <thead>
+    <tr>
+      <th>S NO.</th>
+      <th>Name</th>
+      <th>Role</th>
+      <th>Pata nhi</th>
+      <th>Roll no.</th>
+      <th>Date</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody id="dataResultId">
+  </tbody>
+</table>
+<br>
+<hr>
+<br>
+<table border="1" width="100%">
+  <thead>
+    <tr>
+      <th>S NO.</th>
+      <th>Name</th>
+      <th>Role</th>
+      <th>Pata nhi</th>
+      <th>Roll no.</th>
+      <th>Date</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody id="dataResult2Id">
+  </tbody>
+</table>
+<script>
+
+const data  = [
+  { 
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }  
+];
+
+//for Loop
+let html = "";
+
+for(i=0; i<data.length; i++){
+    html  += "<tr>"
+
+    for(j=0; j<data[i].length; j++){
+        html += `<td>${data[i][j]}</td>`;
+ }
+    
+}
+html += "</tr>";
+document.getElementById("dataResultId").innerHTML = html;
+
+
+//forEach
+
+let dataEach  = "";
+data.forEach(getArrayElement);
+
+ function getArrayElement(value,index) {
+
+    //console.log(arrayResult);
+    dataEach  += "<tr>";
+    for(j=0; j<data[index].length; j++){
+        dataEach += `<td>${value[j]}</td>`;
+    }
+    dataEach += "</tr>";
+ }
+
+   document.getElementById("dataResult2Id").innerHTML = dataEach;
+
+</script>
+</body>
+</html>

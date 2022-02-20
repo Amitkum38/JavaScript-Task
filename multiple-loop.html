@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loop in Javascript</title>
+</head>
+
+<body>
+<!-- For Loop do while and while Loop --> 
+<script type="text/Javascript">
+        var studentName = ["Amit", "Deepak", "Shyam", "Sujeet"];
+        var i =0;
+        var  l = studentName.length;
+
+        studentName.forEach(myFunction)
+
+        function myFunction(item, index, arr){
+           console.log(item, index, arr)
+        }
+
+       /* for(i = 0; i<l; i++){
+            console.log(studentName[i]);
+        }*/
+
+        /*
+        while(i<l){
+           console.log(studentName[i]);
+           i++
+        }*/
+
+        /*do{
+            console.log(studentName[i]);
+            i++
+        } while(i<l)*/
+    </script>
+</body>
+</html>
