@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chese Board</title>
+</head>
+
+<body>
+
+
+    <table style="width: 600px; margin:0 auto;">
+       <tbody id="cheseRow"></tbody>
+    </table>
+
+    <button onclick="cheseBoard()">cheseBoard</button>
+
+    <script>
+       // var x = 8;
+        var html= ""; 
+
+       function cheseBoard(val) {
+            for (i = 1; i <= val; i++) {
+                html += "<tr>";
+                
+                for (j = 1; j <= val; j++) {
+
+                    if ((i+j) % 2 == 0) {
+
+                        //console.log("Red")
+
+                        html += "<td style='background:red; width:50px; height:50px;'></td>";
+                    
+                    } else {
+                       // console.log("black")
+
+                       html += "<td style='background:black; width:50px; height:50px;'></td>";
+                        
+                    }
+                    
+                }
+                html += "<tr>";
+            }
+
+            document.getElementById("cheseRow").innerHTML+= html;
+       };
+     
+       cheseBoard(15)
+
+    </script>
+</body>
+
+</html>

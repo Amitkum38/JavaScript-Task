@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Chese Board</title>
+   </head>
+   <body>
+      <table >
+         <tbody id="cheseBoardRow">
+         </tbody>
+      </table>
+      <script>
+          var x = 8;
+         var i = 1;
+         var j = 1;
+         var html= ""; 
+
+         var html= ""; 
+         function cheseBoard(){
+            for (i = 1; i <= x; i++) {
+                html += "<tr>";
+             
+             for (j = 1; j <= x; j++) {
+                if ((i+j) % 2 == 0 ) {
+                    html += "<td style='background:white; border:1px #000 solidl; width:85px; height:85px;'></td>";
+                } else {
+                    html += "<td style='background:black; width:85px; height:85px;'></td>";
+                }
+             }
+             html += "</tr>";
+         }
+         document.getElementById("cheseBoardRow").innerHTML+= html;
+         };
+         cheseBoard();
+      </script>
+   </body>
+</html>

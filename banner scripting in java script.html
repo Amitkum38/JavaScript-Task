@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<body>
+<center>
+<img id="mybanner" src="" width="1004px" height="350">
+<script>
+var d = document.getElementById("mybanner")
+d.src="images/bnr1.jpg"
+d.style.position="relative"
+d.style
+var bannerlist = new Array("images/bnr2.jpg","images/bnr3.jpg","images/bnr4.jpg","images/bnr5.jpg","images/bnr6.jpg","images/bnr7.jpg","images/bnr8.jpg","images/bnr9.jpg")
+
+var i=0
+var b=0
+function run_banner()
+{
+
+d.src=bannerlist[i]
+i++
+
+if(i==8){i=0}
+ if(b==1)
+{
+d.style.transform="scale(-0)"
+b=0.1
+}
+
+else
+{
+d.style.transform="scale(1)"
+b=1
+}
+document.title=b
+d.style.transition="1s"
+
+}
+
+setInterval("run_banner()",1000)
+</script>
+</center>
+</body>
+</html>
